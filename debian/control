@@ -1,15 +1,38 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-adamkorcz-go-fuzz-headers-1
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders:
+ Simon Josefsson <simon@josefsson.org>,
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-golang,
+ golang-any,
+ golang-k8s-api-dev,
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-adamkorcz-go-fuzz-headers-1
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-adamkorcz-go-fuzz-headers-1.git
+Homepage: https://github.com/AdamKorcz/go-fuzz-headers-1
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/AdamKorcz/go-fuzz-headers-1
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-adamkorcz-go-fuzz-headers-1-dev
+Provides: golang-github-adalogics-go-fuzz-headers-dev
+Conflicts: golang-github-adalogics-go-fuzz-headers-dev
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ golang-k8s-api-dev,
+ ${misc:Depends},
+Description: helper functions for Go fuzzing (library)
+ Various helper functions for go fuzzing. It is mostly used in combination
+ with go-fuzz (https://github.com/dvyukov/go-fuzz), but compatibility with
+ fuzzing in the standard library will also be supported. Any coverage guided
+ fuzzing engine that provides an array or slice of bytes can be used with
+ go-fuzz-headers.
+ .
+ go-fuzz-headers' approach to fuzzing structs is strongly inspired by
+ gofuzz (https://github.com/google/gofuzz).
+ .
+ This package contains the library.

@@ -1,5 +1,12 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-adamkorcz-go-fuzz-headers-1 (0.0~git20230919.8b5d3ce-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload
+  * Add compatibility symlink for github.com/AdaLogics/go-fuzz-headers
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Reinhard Tartler <siretart@tauware.de>  Tue, 02 Jul 2024 17:39:29 -0400
+
+golang-github-adamkorcz-go-fuzz-headers-1 (0.0~git20230919.8b5d3ce-1) unstable; urgency=medium
+
+  * Initial release (Closes: #1060839)
+
+ -- Simon Josefsson <simon@josefsson.org>  Mon, 15 Jan 2024 13:37:57 +0100
